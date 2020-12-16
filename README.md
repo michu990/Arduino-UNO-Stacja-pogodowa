@@ -7,4 +7,4 @@ Elementy wejścia:
 Elementy wyjścia:
 * Wyświetlacz LCD
 
-Stacja pogodowa będzie wyświetlać temperaturę oraz poziom wilgotności powietrza na wyświetlaczu LCD.
+Stacja pogodowa będzie wyświetlać na LCD temperaturę oraz wilgotność powietrza pobieraną z czujnika DHT11.
