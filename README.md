@@ -2,7 +2,7 @@
 
 ## Opis
 Elementy wejścia:
-* Czujnik temperatury i wilgotności DHT11 (mniej dokładny) / STTS22H (bardziej dokładny) % do zmiany czujka
+* Czujnik temperatury i wilgotności DHT11 (mniej dokładny) / STTS22H (bardziej dokładny) 
 
 Elementy wyjścia:
 * Wyświetlacz LCD
