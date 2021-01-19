@@ -1,4 +1,4 @@
-# Stacja pogodowa wyświetlająca temperature oraz wilgotność
+# Stacja pogodowa wyświetlająca temperaturę oraz wilgotność
 
 ## Opis
 Elementy wejścia:
