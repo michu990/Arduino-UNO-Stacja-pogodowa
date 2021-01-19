@@ -15,7 +15,7 @@ DallasTemperature sensors(&oneWire);              // Przekazuje dane z bibliotek
 void setup()
 {
   lcd.begin(16, 2);                               
-  lcd.print("TEMP        WILG");                  // Wyswietla napis
+  lcd.print(" TEMP      WILG");                  // Wyswietla napis
   Serial.begin(9600);                           
   sensors.begin();                                // Uruchamia sensor DS18B20
   dht.begin();                                    // Uruchamia sensor DHT11
@@ -51,7 +51,7 @@ void loop()
   lcd.print(round(tempC));                   // Wypisuje temperature w C
   lcd.print("C ");                           // Wyswietla napis
   lcd.print(round(tempF));                   // Wypisuje temperature w F
-  lcd.print("F  ");                          // Wyswietla napis
+  lcd.print("F    ");                        // Wyswietla napis
   lcd.print(round(humidity));                // Wypisuje wilgotnosc w %
   lcd.print("%   ");                         // Wyswietla napis
 
