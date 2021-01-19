@@ -4,7 +4,7 @@
 #include <Adafruit_Sensor.h>
 #include <DHT.h>
 
-#define DHT_PIN A0                                //PIN cyfrowy podlaczony do DHT11
+#define DHT_PIN A0                                // PIN cyfrowy podlaczony do DHT11
 #define DHTTYPE DHT11                             // Zdefiniowany typ DHT11
 const int SENSOR_PIN = A1;                        // PIN cyfrowy podlaczony do DS18B20
 DHT dht = DHT(DHT_PIN ,DHTTYPE);                  
