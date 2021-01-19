@@ -8,4 +8,4 @@ Elementy wejścia:
 Elementy wyjścia:
 * Wyświetlacz LCD
 
-Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wartość wilgotności pobieraną z czujnika DHT11.
+Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wilgotność powietrza pobieraną z czujnika DHT11.
