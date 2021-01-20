@@ -46,7 +46,7 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);            // Podlaczone PINY wyswietlacz
 OneWire oneWire(SENSOR_PIN);                      // Uruchamia biblioteke oneWire
 DallasTemperature sensors(&oneWire);              // Przekazuje dane z biblioteki oneWire do bilbioteki DallasTemperature
 ```
-W tej części kodu uruchomiono oba sensory, uruchomiono wyświetlacz, wypisano tekst na wyświetlaczu oraz zadeklarowano przycisk i dwie diody LED jako wyjście.
+W tej części kodu uruchomiono oba sensory, uruchomiono wyświetlacz, wypisano tekst na wyświetlaczu oraz zadeklarowano przycisk jako wejście natomiast dwie diody LED jako wyjście.
 ```cpp
 void setup()
 {
