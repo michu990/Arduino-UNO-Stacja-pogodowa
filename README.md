@@ -79,7 +79,9 @@ void loop()
   float tempF;                                    // Temperature w F
   float humidity = dht.readHumidity(DHT_PIN);     // Wilgotnosc
 ```
-W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie, program przechodzi dalej.
+W tej części program sprawdza czy czujnik DHT11 działa poprawnie.
+Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze.
+Jeśli działa poprawnie, program przechodzi dalej.
 ```cpp
   if (isnan(humidity))                            // Sprawdza blad odczytu z czujnika DHT11
     {
@@ -129,7 +131,8 @@ W tej części kod jest realizowany dla wartości Celsjusza.
       lcd.print("%   ");                         // Wyswietla napis
     }
  ```
- Tutaj natomiast wyświetla wartości w Fahrenheitach. Dioda led pali się na czerwono.
+ Tutaj natomiast wyświetla wartości w Fahrenheitach.
+ Zapala się czerwona dioda LED.
  ```cpp
   else
     {   
