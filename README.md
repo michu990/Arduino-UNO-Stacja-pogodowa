@@ -1,15 +1,19 @@
 # Stacja pogodowa wyświetlająca temperaturę oraz wilgotność
 
 ## Ogólny opis
+
 Elementy wejścia:
+
 * Czujnik temperatury i wilgotności DHT11
 * Czujnik temperatury DS18B20
 * Przycisk
 
 Elementy wyjścia:
+
 * Wyświetlacz LCD
 
 Wykorzystane bilbioteki:
+
 * LiquidCrystal
 * OneWire
 * DallasTemperature
@@ -17,16 +21,21 @@ Wykorzystane bilbioteki:
 * Adafruit_Sensor
 
 Wykorzystane elementy:
-* t
-* t
-* t
-* t
-* t
-* t
-* t
-* t
-* t
-* t
+
+* Arduino Uno R3
+* Płytka prototypowa (breadboard) 830 pól
+* Wyświetlacz LCD 2x16
+* Złącze goldpin 1x16 2.54mm
+* Potencjometr 10kΩ
+* Moduł DHT11
+* Moduł DS18B20
+* Przycisk Tact-Switch
+* 21 zworek różnych długości
+* 16 przewodów różnej długości
+* 2 rezystory 220Ω wykorzystane do diod LED
+* Rezystor 10kΩ wykorzystany do przycisku
+* Rezystor 4.7kΩ wykorzystany do DS18B20
+* Rezystor 4.7kΩ wykorzystany do DHT11
 
 Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wilgotność powietrza pobieraną z czujnika DHT11.
 Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Celsjuszach lub Fahrenheitach sygnalizując przy tym odpowiednią diodą LED (Zielona dla C, czerwona dla F).
