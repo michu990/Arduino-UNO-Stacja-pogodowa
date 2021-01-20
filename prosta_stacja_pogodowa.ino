@@ -21,47 +21,47 @@ DallasTemperature sensors(&oneWire);              // Przekazuje dane z bibliotek
 
 void setup()
 {
-  pinMode(rledPin, OUTPUT);                        // Ustawienie czerwonego LEDA jako wyjście
-  pinMode(gledPin, OUTPUT);                        // Ustawienie zielonego LEDA jako wyjście
+  pinMode(rledPin, OUTPUT);                       // Ustawienie czerwonego LEDA jako wyjście
+  pinMode(gledPin, OUTPUT);                       // Ustawienie zielonego LEDA jako wyjście
   pinMode(buttonPin, INPUT_PULLUP);
   lcd.begin(16, 2);
-  lcd.print(" TEMP      WILG");                    // Wyswietla napis
+  lcd.print(" TEMP      WILG");                   // Wyswietla napis
   Serial.begin(9600);
-  sensors.begin();                                 // Uruchamia sensor DS18B20
-  dht.begin();                                     // Uruchamia sensor DHT11
+  sensors.begin();                                // Uruchamia sensor DS18B20
+  dht.begin();                                    // Uruchamia sensor DHT11
 }
 
 void loop()
 {
-  float tempC;                                     // Temperatura w C
-  float tempF;                                     // Temperature w F
-  float humidity = dht.readHumidity(DHT_PIN);      // Wilgotnosc
+  float tempC;                                    // Temperatura w C
+  float tempF;                                    // Temperature w F
+  float humidity = dht.readHumidity(DHT_PIN);     // Wilgotnosc
  
-  if (isnan(humidity))                             // Sprawdza blad odczytu z czujnika DHT11
+  if (isnan(humidity))                            // Sprawdza blad odczytu z czujnika DHT11
     {
-      Serial.println(F("Brak odczytu z DHT!"));
-      return;
+      Serial.println(F("Brak odczytu z DHT!"));   // Zwraca blad w Serial Monitorze
+      return;                                     // Zapetla az blad ustanie
     }
     
-  buttonState = digitalRead(buttonPin);
+  buttonState = digitalRead(buttonPin);           // Odczytanie stanu przycisku (HIGH lub LOW)
   
   Serial.print("  -  ");                          // Separator
-  Serial.print("Stan przycisku:  ");
-  Serial.println(buttonState);
+  Serial.print("Stan przycisku:  ");              // Wyswietla napis
+  Serial.println(buttonState);                    // Wypisuje stan przycisku w Serial Monitor
 
   
-  button = buttonState;
+  button = buttonState;                           // Stan guzika w zmiennej
   if(klik==0 && button==1)
   {
   CF = !CF;
   }
   klik = button;
   
-  if (CF)
+  if (CF)                                        // Wybór pomiędzy C lub F
     {
 
-      digitalWrite(gledPin, HIGH);
-      digitalWrite(rledPin, LOW);
+      digitalWrite(gledPin, HIGH);               // Zapala zielonego LEDA
+      digitalWrite(rledPin, LOW);                // Gasi czerwonego LEDA
       
       sensors.requestTemperatures();             // Wysyła komende aby odczytac wartosc temperatury
       tempC = sensors.getTempCByIndex(0);        // Czyta wartosc temperatury w C
@@ -83,8 +83,8 @@ void loop()
    
   else
     {   
-      digitalWrite(gledPin, LOW);
-      digitalWrite(rledPin, HIGH);
+      digitalWrite(gledPin, LOW);                // Gasi zielonego LEDA
+      digitalWrite(rledPin, HIGH);               // Zapala czerwonego LEDA
       
       sensors.requestTemperatures();             // Wysyła komende aby odczytac wartosc temperatury
       tempC = sensors.getTempCByIndex(0);        // Czyta wartosc temperatury w C
