@@ -22,3 +22,5 @@ Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Cels
 ![photoC](media/photoC.JPG)
 
 ![photoF](media/photoF.JPG)
+
+Działanie guzika zobrazowane zostało na ![filmie](https://www.youtube.com/watch?v=bysFPIYge0k&feature=youtu.be).
