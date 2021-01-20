@@ -168,7 +168,7 @@ W tej części kod jest realizowany dla wartości Celsjusza.
    }
 }
 ```
-## Zdjęcia płytki oraz film działającego programu.
+## Zdjęcie płytki oraz film pokazujący działanie programu.
 
 ![photoC](media/photoC.JPG)
 
