@@ -70,7 +70,6 @@ void loop()
 ```
 W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie program przechodzi dalej.
 ```
- 
   if (isnan(humidity))                            // Sprawdza blad odczytu z czujnika DHT11
     {
       Serial.println(F("Brak odczytu z DHT!"));   // Zwraca blad w Serial Monitorze
@@ -84,7 +83,6 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
   Serial.print("  -  ");                          // Separator
   Serial.print("Stan przycisku:  ");              // Wyswietla napis
   Serial.println(buttonState);                    // Wypisuje stan przycisku w Serial Monitor
-  
 ```
 Stan guzika zostaje zapisany w zmiennej, następnie zostaje wyświetlona temperatura w zależności od stanu przycisku.
 W tej części kod jest realizowany dla wartości Celsjusza.
