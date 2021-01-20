@@ -45,10 +45,8 @@ DHT dht = DHT(DHT_PIN ,DHTTYPE);
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);            // Podlaczone PINY wyswietlacza LCD
 OneWire oneWire(SENSOR_PIN);                      // Uruchamia biblioteke oneWire
 DallasTemperature sensors(&oneWire);              // Przekazuje dane z biblioteki oneWire do bilbioteki DallasTemperature
-
 ```
 W tej części kodu uruchomiono oba sensory, uruchomiono wyświetlacz, wypisano tekst na wyświetlaczu oraz zadeklarowano dwie diody LED jako wyjście.
-
 ```
 void setup()
 {
@@ -63,14 +61,12 @@ void setup()
 }
 ```
 Następnie przypisano zmienne dla wartości temperatur oraz wilgotności powietrza.
-
 ```
 void loop()
 {
   float tempC;                                    // Temperatura w C
   float tempF;                                    // Temperature w F
   float humidity = dht.readHumidity(DHT_PIN);     // Wilgotnosc
-
 ```
 W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie program przechodzi dalej.
 ```
@@ -82,7 +78,6 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
     }
 ```
   Program odczytuje stan guzika (wysoki lub niski) i wyświetla odpowiednio 0 lub 1 w Serial Monitorze. 
-   
 ```
   buttonState = digitalRead(buttonPin);           // Odczytanie stanu przycisku (HIGH lub LOW)
   
@@ -93,9 +88,7 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
 ```
 Stan guzika zostaje zapisany w zmiennej, następnie zostaje wyświetlona temperatura w zależności od stanu przycisku.
 W tej części kod jest realizowany dla wartości Celsjusza.
-
 ```
-  
   button = buttonState;                           // Stan guzika w zmiennej
   if(klik==0 && button==1)
   {
@@ -128,7 +121,6 @@ W tej części kod jest realizowany dla wartości Celsjusza.
     }
  ```
  Tutaj natomiast wyświetla wartości w Fahrenheitach.
- 
  ```
   else
     {   
@@ -154,8 +146,8 @@ W tej części kod jest realizowany dla wartości Celsjusza.
       lcd.print("%   ");                         // Wyswietla napis
    }
 }
-
 ```
+## Zdjęcia oraz film działającego programu.
 
 ![photoC](media/photoC.JPG)
 
