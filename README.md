@@ -16,9 +16,20 @@ Wykorzystane bilbioteki:
 * DHT
 * Adafruit_Sensor
 
+Wykorzystane elementy:
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
 Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wilgotność powietrza pobieraną z czujnika DHT11.
 Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Celsjuszach lub Fahrenheitach sygnalizując przy tym odpowiednią diodą LED (Zielona dla C, czerwona dla F).
-
 
 ## Opis Kodu
 Wykorzystane zostały nastepujące biblioteki.
@@ -29,7 +40,7 @@ Wykorzystane zostały nastepujące biblioteki.
 #include <Adafruit_Sensor.h>                     // Wymagana bilbioteka do poprawnego działania sensora DHT11
 #include <DHT.h>                                 // Biblioteka wykorzystana dla czujnika DHT11
 ```
-Następnie zadeklarowano PINY dla poszczególnych elementów.
+Następnie zadeklarowano zmienne oraz PINY dla poszczególnych elementów.
 ```cpp
 #define DHT_PIN A0                                // PIN cyfrowy podlaczony do DHT11
 #define DHTTYPE DHT11                             // Zdefiniowany typ DHT w tym przypadku DHT11
@@ -68,7 +79,7 @@ void loop()
   float tempF;                                    // Temperature w F
   float humidity = dht.readHumidity(DHT_PIN);     // Wilgotnosc
 ```
-W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie program przechodzi dalej.
+W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie, program przechodzi dalej.
 ```cpp
   if (isnan(humidity))                            // Sprawdza blad odczytu z czujnika DHT11
     {
@@ -84,7 +95,7 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
   Serial.print("Stan przycisku:  ");              // Wyswietla napis
   Serial.println(buttonState);                    // Wypisuje stan przycisku w Serial Monitor
 ```
-Stan guzika zostaje zapisany w zmiennej, następnie zostaje wyświetlona temperatura w zależności od stanu przycisku.
+Stan guzika zostaje zapisany w zmiennej, następnie zostaje wyświetlona temperatura oraz dioda LED w zależności od stanu przycisku.
 W tej części kod jest realizowany dla wartości Celsjusza.
 ```cpp
   button = buttonState;                           // Stan guzika w zmiennej
@@ -118,7 +129,7 @@ W tej części kod jest realizowany dla wartości Celsjusza.
       lcd.print("%   ");                         // Wyswietla napis
     }
  ```
- Tutaj natomiast wyświetla wartości w Fahrenheitach.
+ Tutaj natomiast wyświetla wartości w Fahrenheitach. Dioda led pali się na czerwono.
  ```cpp
   else
     {   
