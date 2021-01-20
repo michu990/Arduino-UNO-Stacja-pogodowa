@@ -1,11 +1,11 @@
-#include <OneWire.h>
-#include <DallasTemperature.h>
-#include <LiquidCrystal.h>
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
+#include <OneWire.h>                             // Biblioteka wykorzystana do poprawnego działania czujnika temperatury DS18B20
+#include <DallasTemperature.h>                   // Biblioteka wykorzystana dla czujnika temperatury DS18B20
+#include <LiquidCrystal.h>                       // Biblioteka wykorzystana do ekranu LCD
+#include <Adafruit_Sensor.h>                     // Wymagana bilbioteka do poprawnego działania sensora DHT11
+#include <DHT.h>                                 // Biblioteka wykorzystana dla czujnika DHT11
 
 #define DHT_PIN A0                                // PIN cyfrowy podlaczony do DHT11
-#define DHTTYPE DHT11                             // Zdefiniowany typ DHT11
+#define DHTTYPE DHT11                             // Zdefiniowany typ DHT w tym przypadku DHT11
 const int SENSOR_PIN = A1;                        // PIN cyfrowy podlaczony do DS18B20
 const int buttonPin = 9;                          // PIN podlaczony do guzika
 const int rledPin =  8;                           // PIN podlaczony do czerwonego LEDA
@@ -21,8 +21,8 @@ DallasTemperature sensors(&oneWire);              // Przekazuje dane z bibliotek
 
 void setup()
 {
-  pinMode(rledPin, OUTPUT);
-  pinMode(gledPin, OUTPUT);
+  pinMode(rledPin, OUTPUT);                        // Ustawienie czerwonego LEDA jako wyjście
+  pinMode(gledPin, OUTPUT);                        // Ustawienie zielonego LEDA jako wyjście
   pinMode(buttonPin, INPUT_PULLUP);
   lcd.begin(16, 2);
   lcd.print(" TEMP      WILG");                    // Wyswietla napis
