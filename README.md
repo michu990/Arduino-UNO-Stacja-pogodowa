@@ -22,7 +22,7 @@ Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Cels
 
 ## Opis Kodu
 Wykorzystane zostały nastepujące biblioteki.
-```
+```cpp
 #include <OneWire.h>                             // Biblioteka wykorzystana do poprawnego działania czujnika temperatury DS18B20
 #include <DallasTemperature.h>                   // Biblioteka wykorzystana dla czujnika temperatury DS18B20
 #include <LiquidCrystal.h>                       // Biblioteka wykorzystana do ekranu LCD
@@ -30,7 +30,7 @@ Wykorzystane zostały nastepujące biblioteki.
 #include <DHT.h>                                 // Biblioteka wykorzystana dla czujnika DHT11
 ```
 Następnie zadeklarowano PINY dla poszczególnych elementów.
-```
+```cpp
 #define DHT_PIN A0                                // PIN cyfrowy podlaczony do DHT11
 #define DHTTYPE DHT11                             // Zdefiniowany typ DHT w tym przypadku DHT11
 const int SENSOR_PIN = A1;                        // PIN cyfrowy podlaczony do DS18B20
@@ -47,7 +47,7 @@ OneWire oneWire(SENSOR_PIN);                      // Uruchamia biblioteke oneWir
 DallasTemperature sensors(&oneWire);              // Przekazuje dane z biblioteki oneWire do bilbioteki DallasTemperature
 ```
 W tej części kodu uruchomiono oba sensory, uruchomiono wyświetlacz, wypisano tekst na wyświetlaczu oraz zadeklarowano dwie diody LED jako wyjście.
-```
+```cpp
 void setup()
 {
   pinMode(rledPin, OUTPUT);                       // Ustawienie czerwonego LEDA jako wyjście
@@ -61,7 +61,7 @@ void setup()
 }
 ```
 Następnie przypisano zmienne dla wartości temperatur oraz wilgotności powietrza.
-```
+```cpp
 void loop()
 {
   float tempC;                                    // Temperatura w C
@@ -69,7 +69,7 @@ void loop()
   float humidity = dht.readHumidity(DHT_PIN);     // Wilgotnosc
 ```
 W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwraca błąd program informuje nas o tym w Serial Monitorze. Jeśli działa poprawnie program przechodzi dalej.
-```
+```cpp
   if (isnan(humidity))                            // Sprawdza blad odczytu z czujnika DHT11
     {
       Serial.println(F("Brak odczytu z DHT!"));   // Zwraca blad w Serial Monitorze
@@ -77,7 +77,7 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
     }
 ```
   Program odczytuje stan guzika (wysoki lub niski) i wyświetla odpowiednio 0 lub 1 w Serial Monitorze. 
-```
+```cpp
   buttonState = digitalRead(buttonPin);           // Odczytanie stanu przycisku (HIGH lub LOW)
   
   Serial.print("  -  ");                          // Separator
@@ -86,7 +86,7 @@ W tej części program sprawdza czy czujnik DHT11 działa poprawnie. Jeżeli zwr
 ```
 Stan guzika zostaje zapisany w zmiennej, następnie zostaje wyświetlona temperatura w zależności od stanu przycisku.
 W tej części kod jest realizowany dla wartości Celsjusza.
-```
+```cpp
   button = buttonState;                           // Stan guzika w zmiennej
   if(klik==0 && button==1)
   {
@@ -119,7 +119,7 @@ W tej części kod jest realizowany dla wartości Celsjusza.
     }
  ```
  Tutaj natomiast wyświetla wartości w Fahrenheitach.
- ```
+ ```cpp
   else
     {   
       digitalWrite(gledPin, LOW);                // Gasi zielonego LEDA
