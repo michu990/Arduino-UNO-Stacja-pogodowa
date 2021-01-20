@@ -156,4 +156,4 @@ W tej części kod jest realizowany dla wartości Celsjusza.
 
 Działanie guzika zobrazowane zostało na filmie.
 
-[![https://i9.ytimg.com/vi/bysFPIYge0k/mq1.jpg?sqp=CJS0oIAG&rs=AOn4CLDW9NwJY38owhce1O4C59ISFy6UyQ](https://i9.ytimg.com/vi/bysFPIYge0k/mq1.jpg?sqp=CJS0oIAG&rs=AOn4CLDW9NwJY38owhce1O4C59ISFy6UyQ)](https://youtu.be/bysFPIYge0k)
+https://youtu.be/bysFPIYge0k
