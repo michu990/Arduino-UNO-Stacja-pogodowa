@@ -13,7 +13,7 @@ Wykorzystane elementy:
 * Moduł DS18B20
 * Przycisk Tact-Switch
 * 21 zworek różnych długości
-* 16 przewodów różnej długości
+* 16 przewodów męsko - męskich różnej długości
 * 2 rezystory 220Ω wykorzystane do diod LED
 * Rezystor 10kΩ wykorzystany do przycisku
 * Rezystor 4.7kΩ wykorzystany do DS18B20
