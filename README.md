@@ -80,7 +80,7 @@ Jeśli działa poprawnie, program przechodzi dalej.
       return;                                     // Zapetla az blad ustanie
     }
 ```
-  Program odczytuje stan guzika (wysoki lub niski) i wyświetla odpowiednio 0 lub 1 w Serial Monitorze. 
+  Program odczytuje stan guzika (wysoki lub niski) i wyświetla odpowiednio 1 lub 0 w Serial Monitorze. 
 ```cpp
   buttonState = digitalRead(buttonPin);           // Odczytanie stanu przycisku (HIGH lub LOW)
   
