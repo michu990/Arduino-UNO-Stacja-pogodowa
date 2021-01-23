@@ -20,7 +20,7 @@ Wykorzystane elementy:
 * Rezystor 4.7kΩ wykorzystany do DHT11
 
 Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wilgotność powietrza pobieraną z czujnika DHT11.
-Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Celsjuszach lub Fahrenheitach sygnalizując przy tym odpowiednią diodą LED (Zielona dla C, czerwona dla F).
+Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Celsjuszach czy Fahrenheitach sygnalizując przy tym odpowiednią diodą LED (Zielona dla C, czerwona dla F).
 
 ## Opis Kodu
 Wykorzystane zostały nastepujące biblioteki.
