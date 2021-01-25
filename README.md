@@ -1,4 +1,4 @@
-# Stacja pogodowa wyświetlająca temperaturę oraz wilgotność
+# Stacja pogodowa na platformie Arduino Uno wyświetlająca temperaturę oraz wilgotność
 
 ## Ogólny opis
 
