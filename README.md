@@ -16,8 +16,8 @@ Wykorzystane elementy:
 * 16 przewodów męsko - męskich różnej długości
 * 2 rezystory 220Ω wykorzystane do diod LED
 * Rezystor 10kΩ wykorzystany do przycisku
-* Rezystor 4.7kΩ wykorzystany do DS18B20
-* Rezystor 4.7kΩ wykorzystany do DHT11
+* Rezystor 4.7kΩ wykorzystany do czujnika DS18B20
+* Rezystor 4.7kΩ wykorzystany do czujnika DHT11
 
 Układ wyświetla na ekranie LCD temperaturę w Celsjuszach oraz Fahrenheitach pobieraną z czujnika DS18B20 oraz wilgotność powietrza pobieraną z czujnika DHT11.
 Zastosowany przycisk pozwala wybrać czy chcemy wyświetlać temperaturę w Celsjuszach czy Fahrenheitach sygnalizując przy tym odpowiednią diodą LED (Zielona dla C, czerwona dla F).
