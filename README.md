@@ -28,7 +28,7 @@ Wykorzystane zostały nastepujące biblioteki.
 #include <OneWire.h>                             // Biblioteka wykorzystana do poprawnego działania czujnika temperatury DS18B20
 #include <DallasTemperature.h>                   // Biblioteka wykorzystana dla czujnika temperatury DS18B20
 #include <LiquidCrystal.h>                       // Biblioteka wykorzystana do ekranu LCD
-#include <Adafruit_Sensor.h>                     // Bilbioteka wykorzystana do poprawnego działania sensora DHT11
+#include <Adafruit_Sensor.h>                     // Biblioteka wykorzystana do poprawnego działania sensora DHT11
 #include <DHT.h>                                 // Biblioteka wykorzystana dla czujnika DHT11
 ```
 Następnie zadeklarowano zmienne oraz PINY dla poszczególnych elementów.
